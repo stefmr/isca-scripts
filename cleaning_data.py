@@ -13,6 +13,14 @@ page4 = pd.read_excel(xls, 'senior')
 page5 = pd.read_excel(xls, 'senior, member')
 page6 = pd.read_excel(xls, 'senior, others')
 
+#xls2 = pd.ExcelFile('~/Downloads/ISCA24_attendee_list.xlsx')
+#update_page1 = pd.read_excel(xls2, 'student, nonmember')
+#update_page2 = pd.read_excel(xls2, 'student, member')
+#update_page3 = pd.read_excel(xls2, 'student, uarch')
+#update_page4 = pd.read_excel(xls2, 'seniors, nonmembers')
+#update_page5 = pd.read_excel(xls2, 'seniors, member')
+#update_page6 = pd.read_excel(xls2, 'seniors, others')
+
 page1.columns = student_categories
 page2.columns = studentMember_categories
 page3.columns = studentUarch_categories
@@ -162,6 +170,9 @@ students_df = students_df.drop(['ResearchAreas2MaSA', 'ResearchAreas3MaSA', 'Res
 
 ## Add students that registered as seniors into the students dataframe.
 students_df = pd.concat([students_df, students_as_seniors], ignore_index = True)
+
+students_df = students_df.drop_duplicates()
+seniors_df= seniors_df.drop_duplicates()
 
 #################################################
 ## Export

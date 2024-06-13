@@ -137,9 +137,9 @@ for idx, senior in seniors_in_workshops.iterrows():
 
 total_workshops = pd.DataFrame(workshops_tutorials.items(), columns=['Workshops/Tutorials', 'Participants'])
 
-#################################################################
+################################################################
 ## Export xlsx 
-#################################################################
+################################################################
 with pd.ExcelWriter('isca_data.xlsx', engine='xlsxwriter') as writer:
     masa_mentees_students.to_excel(writer, sheet_name='MaSA Students')
     mass_mentees_students.to_excel(writer, sheet_name='MaSS Students')
@@ -149,3 +149,7 @@ with pd.ExcelWriter('isca_data.xlsx', engine='xlsxwriter') as writer:
     masa_mentors_senior_twoStudents.to_excel(writer, sheet_name='MaSA Mentors - 2 students')
     eulogy.to_excel(writer, sheet_name='Eulogy')
     total_workshops.to_excel(writer, sheet_name='Participants per workshop')
+
+#mass_mentors_students_oneStudent.to_csv('mentors1.csv', index=False)
+#mass_mentors_students_twoStudents.to_csv('mentors2.csv', index=False)
+#mass_mentees_students.to_csv('students.csv', index=False)

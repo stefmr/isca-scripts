@@ -1,5 +1,22 @@
 import re
 
+research_areas = [
+    "Processor, memory, and storage systems architecture",
+    "Parallelism: instruction, thread, data, multiprocessor",
+    "Datacenter-scale computing",
+    "IoT, mobile, and embedded architecture",
+    "Interconnection network, router, and network interface architectures",
+    "Architectures for emerging applications including machine learning and bioinformatics",
+    "Architectural support for programming languages or software development",
+    "Architectural support for interfacing with accelerators",
+    "Architectural support for security, virtual memory, and virtualization",
+    "Dependable processor and system architecture",
+    "Architectures for emerging technologies including novel circuits, memory technologies, quantum computing, etc.",
+    "Architecture modeling, simulation methodologies, and tools",
+    "Evaluation and measurement of real computing systems",
+    "No area of preference"
+]
+
 workshops_tutorials = {
     'Workshop: Emerging Vision and Graphics Systems and Architectures' : 0,
     'Tutorial: Memory-Centric Computing Systems' : 0,
